@@ -9,7 +9,7 @@ import React, { Suspense } from "react";
 const fetchWeatherData = async (url: string) => {
   try {
     delay(2000);
-    const response = await fetch(url, { cache: "no-store" });
+    const response = await fetch(url, { cache: "default" });
     if (!response.ok) {
       throw new Error(`Failed to fetch data: ${response.statusText}`);
     }

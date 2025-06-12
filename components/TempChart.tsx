@@ -8,8 +8,9 @@ const findForecastByTime = () => {
   const today = getFormattedDateTime(); // YYYY-MM-DD
   return forecast.forecast.forecastday.find((item) => item.date == today);
 };
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const filterForecastByHours = (forecastHours: any, targetHours: number[]) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return forecastHours.filter((h: any) => {
     const hour = new Date(h.time).getHours();
     return targetHours.includes(hour);
@@ -23,7 +24,7 @@ const getCurrentHourString = () => {
     now.getDate()
   )} ${pad(now.getHours())}:00`;
 };
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomDot = (props: any) => {
   const { cx, cy, payload } = props;
   const currentHour = new Date(getCurrentHourString()).getHours();
@@ -45,6 +46,7 @@ const CustomDot = (props: any) => {
     />
   );
 };
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomLabel = ({ x, y, value, index, data }: any) => {
   const hour = new Date(data[index].time).getHours();
   return (

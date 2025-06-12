@@ -4,6 +4,7 @@ import currentWeather from "../lib/mock/currentWeather.json";
 import { Wind, CloudFog } from "lucide-react";
 import { WeatherAnimation } from "./WeatherAnimation";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const CurrentWeather = (props: any) => {
   const { weather } = props;
   const weatherData: WeatherResponse = weather;

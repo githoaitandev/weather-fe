@@ -1,5 +1,6 @@
+import Image from "next/image";
 import React from "react";
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const WeeklyForecast = (props: any) => {
   const { forecast } = props;
   return (
@@ -14,13 +15,14 @@ export const WeeklyForecast = (props: any) => {
         <div className="list-forecast">
           <ul className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-3 gap-6">
             {forecast.forecast?.forecastday ? (
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               forecast.forecast.forecastday.map((item: any, index: any) => {
                 return (
                   <li
                     key={index}
                     className="flex flex-col items-center bg-gray-800 p-4 rounded-lg lg:rounded-xl shadow-md text-center"
                   >
-                    <img
+                    <Image
                       src={item.day.condition.icon}
                       alt={item.day.condition.text}
                       className="w-8 h-8 md:w-14 md:h-14 mb-2"

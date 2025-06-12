@@ -4,12 +4,12 @@ import rain from "@/public/Rain.json";
 import cloud from "@/public/PartlyCloudy.json";
 import patchyRain from "@/public/PatchyRain.json";
 
-type WeatherCondition = "Rain" | "Thunderstorm" | "Clouds";
+// type WeatherCondition = "Rain" | "Thunderstorm" | "Clouds";
 
-interface WeatherAnimationProps {
-  condition: WeatherCondition;
-}
-
+// interface WeatherAnimationProps {
+//   condition: WeatherCondition;
+// }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const animationMap: Record<any, any> = {
   "Patchy rain nearby": patchyRain,
   "Patchy light rain": patchyRain,
@@ -20,7 +20,7 @@ const animationMap: Record<any, any> = {
   "Moderate rain at times": rain,
   Overcast: rain,
 };
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const WeatherAnimation: React.FC<any> = ({ condition }) => {
   const animationData = animationMap[condition] || rain;
 
