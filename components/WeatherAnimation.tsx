@@ -1,20 +1,24 @@
 import React from "react";
 import Lottie from "lottie-react";
-// Import JSON animation files
-import rain from "@/public/Animation - 1749393410865.json";
+import rain from "@/public/Rain.json";
+import cloud from "@/public/PartlyCloudy.json";
+import patchyRain from "@/public/PatchyRain.json";
 
-type WeatherCondition = "Clear" | "Rain" | "Thunderstorm" | "Snow" | "Clouds";
+type WeatherCondition = "Rain" | "Thunderstorm" | "Clouds";
 
 interface WeatherAnimationProps {
   condition: WeatherCondition;
 }
 
 const animationMap: Record<any, any> = {
-  //   Clear: clearDay,
-  Rain: rain,
-  //   Thunderstorm: thunderstorm,
-  //   Snow: snow,
-  //   Clouds: cloud,
+  "Patchy rain nearby": patchyRain,
+  "Patchy light rain": patchyRain,
+  "Partly Cloudy": cloud,
+  "Light rain shower": cloud,
+  Cloudy: cloud,
+  "Moderate rain": rain,
+  "Moderate rain at times": rain,
+  Overcast: rain,
 };
 
 export const WeatherAnimation: React.FC<any> = ({ condition }) => {

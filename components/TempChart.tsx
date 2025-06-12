@@ -61,7 +61,7 @@ const CustomLabel = ({ x, y, value, index, data }: any) => {
 
 export const TempChart = () => {
   const dataForecast = findForecastByTime();
-  const targetHours = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 21, 22];
+  const targetHours = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22];
   const filteredHours = filterForecastByHours(dataForecast?.hour, targetHours);
 
   return (

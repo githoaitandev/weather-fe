@@ -15,12 +15,14 @@ export const CurrentWeather = (props: any) => {
       <div className="current-weather-wrapper px-10 w-full flex">
         {currentWeather ? (
           <>
-            <div className="weather-info sm:w-full sm:text-center lg:w-2/5">
+            <div className="weather-info flex flex-col justify-center items-center sm:w-full lg:w-2/5">
               <div>
-                <p className="text-8xl">{weatherData.current.temp_c}&deg;C</p>
+                <p className="text-5xl md:text-6xl xl:text-8xl">
+                  {weatherData.current.temp_c}&deg;C
+                </p>
                 <p
                   id="condition-of-weather"
-                  className="mt-2 text-3xl font-medium"
+                  className="mt-2 text-center sm:text-left text-xl xl:text-3xl font-medium"
                 >
                   {weatherData.current.condition.text}
                 </p>
@@ -48,7 +50,9 @@ export const CurrentWeather = (props: any) => {
               </div>
             </div>
             <div className="image-weather w-full">
-              <WeatherAnimation condition="rain" />
+              <WeatherAnimation
+                condition={weatherData.current.condition.text}
+              />
             </div>
           </>
         ) : (

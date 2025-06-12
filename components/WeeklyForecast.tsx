@@ -28,10 +28,10 @@ export const WeeklyForecast = (props: any) => {
                     <span className="text-white font-semibold text-xs xl:text-sm mb-1 truncate w-full">
                       {item.date}
                     </span>
-                    <p className="text-gray-300 text-xs md:text-sm  mb-1 whitespace-nowrap overflow-hidden">
+                    <p className="text-gray-300 text-xs md:text-sm  mb-1 whitespace-nowrap truncate w-full">
                       {item.day.condition.text}
                     </p>
-                    <span className="text-white font-bold text-sm md:text-lg xl:text-xl">
+                    <span className="text-white font-bold text-sm xl:text-lg">
                       {item.day.maxtemp_c}&deg;C
                     </span>
                   </li>
