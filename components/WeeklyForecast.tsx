@@ -22,7 +22,7 @@ export const WeeklyForecast = (props: any) => {
                     key={index}
                     className="flex flex-col items-center bg-gray-800 p-4 rounded-lg lg:rounded-xl shadow-md text-center"
                   >
-                    <Image
+                    <img
                       src={item.day.condition.icon}
                       alt={item.day.condition.text}
                       className="w-8 h-8 md:w-14 md:h-14 mb-2"
